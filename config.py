@@ -1,4 +1,9 @@
-API_ID = 123456  # Replace with your API ID
-API_HASH = "your_api_hash"  # Replace with your API Hash
-BOT_TOKEN = "your_bot_token"  # Replace with your Bot Token
-MONGO_URI = "mongodb+srv://username:password@cluster.mongodb.net/dbname"  # Replace with your Mongo URI
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+MONGO_URI = os.getenv("MONGO_URI")
